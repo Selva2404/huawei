@@ -1,0 +1,76 @@
+Obs
+
+
+Supported metrics
+
+Standard Storage
+Metric name	Description	Unit
+Total Storage Capacity	The total amount of data stored across all storage classes in the OBS bucket.	Bytes
+Standard Storage Capacity	The volume of data stored in the Standard multi-AZ storage class.	Bytes
+Standard Single-AZ Storage Capacity	The volume of data stored in the Standard single-AZ storage class.	Bytes
+Standard Objects Count	The total number of objects stored in the Standard storage class.	Count
+Standard Single-AZ Objects Count	The total number of objects in the Standard single-AZ storage class.	Count
+Infrequent Access Storage
+Metric name	Description	Unit
+Infrequent Access Storage Capacity	The volume of data stored in the Infrequent Access multi-AZ storage class.	Bytes
+Infrequent Access Single-AZ Storage Capacity	The volume of data stored in the Infrequent Access single-AZ storage class.	Bytes
+Infrequent Access Objects Count	The number of objects in the Infrequent Access storage class.	Count
+Infrequent Access Single-AZ Objects Count	The number of objects in the Infrequent Access single-AZ storage class.	Count
+Archive and Deep Archive
+Metric name	Description	Unit
+Archive Storage Capacity	The volume of data stored in the Archive storage class, suited for long-term cold data.	Bytes
+Deep Archive Storage Capacity	The volume of data stored in the Deep Archive storage class, the lowest-cost option for rarely accessed data.	Bytes
+Archive Objects Count	The number of objects stored in the Archive storage class.	Count
+Deep Archive Objects Count	The number of objects stored in the Deep Archive storage class.	Count
+Intelligent Tiering
+Metric name	Description	Unit
+Total Capacity	Total storage capacity managed under the Intelligent Tiering policy.	Bytes
+Frequent Access Capacity	Data in the Intelligent Tiering tier currently classified as Frequent Access.	Bytes
+Infrequent Access Capacity	Data in the Intelligent Tiering tier currently classified as Infrequent Access.	Bytes
+Archive Capacity	Data in the tier that has been moved to Archive tier.	Bytes
+Objects Count	Total number of objects managed under Intelligent Tiering.	Count
+Frequent Objects Count	Number of objects in the Frequent Access tier.	Count
+Infrequent Objects Count	Number of objects in the Infrequent Access tier.	Count
+Archive Objects Count	Number of objects moved to archive within Intelligent Tiering.	Count
+Download Traffic
+Metric name	Description	Unit
+Total Download Bytes	Total bytes downloaded from the OBS bucket across all network types.	Bytes
+Download Bytes - External Network	Bytes downloaded over the public internet (external network).	Bytes
+Download Bytes - Internal Network	Bytes downloaded over Huawei Cloud's internal network.	Bytes
+Download Traffic	The aggregate data volume downloaded, combining all network paths.	Bytes
+Download Traffic - External Network	Download traffic originating from external (public) network requests.	Bytes
+Download Traffic - Internal Network	Download traffic originating from internal Huawei Cloud network requests.	Bytes
+Download Latency
+Metric name	Description	Unit
+Download Transfer Rate	The speed at which data is transferred during download operations.	Bytes/second
+Download Server Request Latency	The time the OBS server takes to process a download request, excluding network transit time.	Milliseconds
+Download Total Request Latency	The end-to-end time from client download request to last byte received.	Milliseconds
+Upload Metrics
+Metric name	Description	Unit
+Total Upload Bytes	Total bytes uploaded to the OBS bucket across all network types.	Bytes
+Upload Bytes - Internal Network	Bytes uploaded over Huawei Cloud's internal network.	Bytes
+Upload Traffic	The aggregate data volume uploaded.	Bytes
+Upload Traffic - Internal Network	Upload traffic originating from Huawei Cloud internal network.	Bytes
+Upload Transfer Rate	The speed at which data is transferred during upload operations.	Bytes/second
+Upload Server Request Latency	The time the OBS server takes to process an upload request, server-side only.	Milliseconds
+Upload Total Request Latency	The end-to-end latency from client upload initiation to server acknowledgment.	Milliseconds
+Request Operations
+Metric name	Description	Unit
+GET Request Count	The total number of GET (download/read) requests received by the bucket.	Count
+PUT Request Count	The total number of PUT (upload/write) requests received by the bucket.	Count
+Total Object Count	The total count of all objects stored in the bucket across all storage classes.	Count
+API and Performance Rates
+Metric name	Description	Unit
+API Requests Per Second	The total rate of API requests of all types being handled per second.	Count/second
+Requests Per Second	Total data access requests per second.	Count/second
+GET Requests Per Second	The rate of GET requests per second.	Count/second
+PUT Requests Per Second	The rate of PUT requests per second.	Count/second
+DELETE Requests Per Second	The rate of DELETE requests per second.	Count/second
+Response Status
+Metric name	Description	Unit
+Request Code Distribution	The breakdown of HTTP response codes returned by OBS, showing the distribution across 2xx, 4xx, 5xx responses.	Count
+Request Success Rate	The percentage of all requests that returned a successful HTTP response (2xx).	Percentage
+Request Failure Rate	The percentage of all requests that returned an error response (4xx or 5xx).	Percentage
+Effective Request Rate	The percentage of requests that resulted in meaningful data operations, excluding empty or aborted requests.	Percentage
+First Byte Latency	The time from when a request is received to when the first byte of the response is sent.	Milliseconds
+Total Request Latency	The total time to process fully and respond to a request.	Milliseconds
