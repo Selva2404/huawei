@@ -1,0 +1,60 @@
+Supported metrics
+￼
+Client Connections
+Metric name	Description	Unit
+Connected Clients	The current number of client connections to the DCS instance.	Count
+Blocked Clients	The number of clients currently blocked waiting on a blocking command (e.g., BLPOP).	Count
+Rejected Connections	The total number of connection attempts rejected due to the maximum connection limit being reached.	Count
+Total Connections Received	The total number of client connections accepted by the DCS instance since startup.	Count
+Connection Utilization	The percentage of the maximum allowed connections currently in use.	Percentage
+Resource Utilization
+Metric name	Description	Unit
+CPU Usage	The instantaneous percentage of CPU resources being consumed by the DCS instance.	Percentage
+Average CPU Usage	The average CPU utilization over the monitoring period.	Percentage
+Memory Usage	The percentage of total memory currently in use by the DCS instance.	Percentage
+Maximum Memory Usage	The peak memory utilization recorded during the monitoring period.	Percentage
+Memory Metrics
+Metric name	Description	Unit
+Used Memory	The total amount of memory currently allocated and used by the DCS instance.	Bytes
+Used Memory - RSS	The resident set size of memory allocated by the OS to the DCS process, including fragmentation.	Bytes
+Peak Memory Usage	The maximum amount of memory that has ever been consumed by the DCS instance.	Bytes
+Memory Used by Dataset	The amount of memory used directly to store data.	Bytes
+Dataset Memory Percentage	The proportion of used memory that is occupied by the actual dataset.	Percentage
+LUA Script Memory Usage	Memory consumed by loaded LUA scripts.	Bytes
+Memory Fragmentation Ratio	The ratio of RSS memory to used memory; values significantly above 1.0 indicate fragmentation.	Ratio
+Network and Bandwidth
+Metric name	Description	Unit
+Bandwidth Usage	The percentage of the allocated network bandwidth currently utilized.	Percentage
+Instantaneous Input Bandwidth	The current rate of inbound network traffic to the DCS instance.	KB/second
+Instantaneous Output Bandwidth	The current rate of outbound network traffic from the DCS instance.	KB/second
+Total Network Input Bytes	The cumulative volume of data received by the DCS instance since startup.	Bytes
+Total Network Output Bytes	The cumulative volume of data transmitted by the DCS instance since startup.	Bytes
+Commands and Operations
+Metric name	Description	Unit
+Total Commands Processed	The cumulative number of commands processed by the DCS instance since startup.	Count
+Instantaneous Operations Per Second	The current number of commands being executed per second.	Count
+Average Command Response Time	The mean time taken to process and respond to commands.	Milliseconds
+Maximum Command Response Time	The longest command response time observed during the monitoring period.	Milliseconds
+Maximum Command Delay	The maximum delay experienced by a command from submission to execution.	Milliseconds
+Read Commands Count	The total number of read commands (e.g., GET, HGET) executed.	Count
+Average Read Command Response Time	The mean response time for read operations.	Milliseconds
+Write Commands Count	The total number of write commands (e.g., SET, HSET) executed.	Count
+Average Write Command Response Time	The mean response time for write operations.	Milliseconds
+Keys and Eviction
+Metric name	Description	Unit
+Total Keys	The total number of keys currently stored in the DCS instance across all databases.	Count
+Evicted Keys	The number of keys that have been automatically removed to free memory according to the eviction policy.	Count
+Expired Keys	The number of keys that have reached their time-to-live expiry and been removed.	Count
+Keys with Expiration	The number of keys that have an active TTL expiration set.	Count
+Cache Hit Rate	The percentage of key lookups that successfully found the requested data in the cache.	Percentage
+Cache Misses	The total number of key lookups that failed to find the data in cache.	Count
+Pub/Sub and Replication
+Metric name	Description	Unit
+Pub/Sub Channels	The number of active pub/sub channels currently subscribed to.	Count
+Pub/Sub Patterns	The number of active pub/sub pattern subscriptions.	Count
+Master-Slave Replication Offset	The byte offset difference between master and replica, indicating replication lag.	Bytes
+Full Synchronizations	The total number of full resync operations performed between master and replica.	Count
+Node Reboots	The number of times the DCS node has been restarted.	Count
+Receive Flow Control Events	The count of events where incoming network flow was throttled.	Count
+Slow Log Present	Indicates whether any slow-executing commands exist in the slow log.	Boolean
+Slow Log Command Count	The number of commands recorded in the slow log.	Count
