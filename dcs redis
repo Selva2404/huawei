@@ -1,0 +1,75 @@
+Metric ID	Metric Name	Unit
+connected_clients,mc_connected_clients  A	Connected Clients	Count
+blocked_clients.   redis	Blocked Clients	Count
+rejected_connections..men, radio cluster,3	Rejected Connections	Count
+total_connections_received, mc_connections_received, not proxy	Total Connections Received	Count
+connections_usage, cluster, proxy	Connection Utilization	%
+cpu_usage. A	CPU Usage	%
+cpu_avg_usage redis, proxy.	Average CPU Usage	%
+memory_usage,mc_used_memory. A	Memory Usage	%
+memory_max_usage,, redis 4	Maximum Memory Usage	%
+used_memory not proxy	Used Memory	Bytes
+used_memory_rss, not proxy	Used Memory RSS	Bytes
+used_memory_peak, not proxy	Peak Memory Usage	Bytes
+used_memory_dataset, redis 4	Memory Used by Dataset	Bytes
+used_memory_dataset_pec, redis 4	Dataset Memory Percentage	%
+used_memory_lua, not proxy	LUA Script Memory Usage	Bytes
+memory_frag_ratio, mc_memory_frag_ratio  A	Memory Fragmentation Ratio	Ratio
+bandwidth_usage redis 4 cluster	Bandwidth Usage	%
+instantaneous_input_kbps, mc_instantaneous_input_kbps   A	Instantaneous Input Bandwidth	KiB/s
+instantaneous_output_kbps, mc_instantaneous_output_kbps A	Instantaneous Output Bandwidth	KiB/s
+total_net_input_bytes redis 3, cluster proxy,	Total Network Input Bytes	Bytes
+total_net_output_bytes redis 3, cluster proxy,	Total Network Output Bytes	Bytes
+total_commands_processed mc_commands_processed 	Total Commands Processed	Count
+instantaneous_ops ,mc_instantaneous_ops A	Instantaneous Operations Per Second	Count/s
+command_avg_rt redis 4 couter proxy	Average Command Response Time	μs
+command_max_rt redis 4 couter proxy	Maximum Command Response Time	μs
+command_max_delay , mc_command_max_delay A	Maximum Command Delay	ms
+read_commands 4 cluster	Read Commands Count	Count/s
+read_command_avg_rt 4 cluster	Average Read Command Response Time	μs
+write_commands 4 cluster	Write Commands Count	Count/s
+write_command_avg_rt 4 cluster	Average Write Command Response Time	μs
+keys redis 3 4cluster 	Total Keys	Count
+evicted_keys, mc_evicted_keys A	Evicted Keys	Count
+expired_keys, mc_expired_keys A	Expired Keys	Count
+expires redis 4	Keys With Expiration	Count
+keyspace_hits_perc, mc_keyspace_hits_perc A	Cache Hit Rate	%
+keyspace_misses redis 3,4,c	Cache Misses	Count
+pubsub_channels redis 3,4,c	Pub/Sub Channels	Count
+pubsub_patterns redis 3,4,c	Pub/Sub Patterns	Count
+ms_repl_offset c	Master-Slave Replication Offset	Bytes
+sync_full c	Full Synchronizations	Count
+rx_controlled 4 c	Receive Flow Control Events	Count
+is_slow_log_exist, mc_is_slow_log_exist	Slow Log Present	Boolean
+slow_log_counts c	Slow Log Command Count	Count
+
+cpu_usage
+memory_usage
+mc_keyspace_hits_perc
+mc_command_max_delay
+mc_connected_clients
+mc_used_memory
+mc_instantaneous_ops
+mc_evicted_keys
+net_in_throughput
+net_out_throughput
+
+
+
+
+
+
+
+Proxy
+pu_usage	Maximum CPU usage	The monitored object's maximum CPU usage among multiple sampling values in a monitoring period	0–100	%	N/A	dcs_cluster_proxy_node	1 minute
+memory_usage	Memory Usage	Memory consumed by the monitored object	0–100	%	N/A	dcs_cluster_proxy_node	1 minute
+p_connected_clients	Connected Clients	Number of connected clients	≥ 0	N/A	N/A	dcs_cluster_proxy_node	1 minute
+max_rxpck_per_sec	Max. NIC Data Packet Receive Rate	Maximum number of data packets received by the proxy NIC per second during the monitoring period	0–10,000,000	Packet/s	N/A	dcs_cluster_proxy_node	1 minute
+max_txpck_per_sec	Max. NIC Data Packet Transmit Rate	Maximum number of data packets transmitted by the proxy NIC per second during the monitoring period	0–10,000,000	Packet/s	N/A	dcs_cluster_proxy_node	1 minute
+max_rxkB_per_sec	Maximum Inbound Bandwidth	Largest volume of data received by the proxy NIC per second	>= 0	KiB/s	1024(IEC)	dcs_cluster_proxy_node	1 minute
+max_txkB_per_sec	Maximum Outbound Bandwidth	Largest volume of data transmitted by the proxy NIC per second	>= 0	KiB/s	1024(IEC)	dcs_cluster_proxy_node	1 minute
+avg_rxpck_per_sec	Average NIC Data Packet Receive Rate	Average number of data packets received by the proxy NIC per second during the monitoring period	0–10,000,000	Packet/s	N/A	dcs_cluster_proxy_node	1 minute
+avg_txpck_per_sec	Average NIC Data Packet Transmit Rate	Average number of data packets transmitted by the proxy NIC per second during the monitoring period	0–10,000,000	Packet/s	N/A	dcs_cluster_proxy_node	1 minute
+avg_rxkB_per_sec	Average Inbound Bandwidth	Average volume of data received by the proxy NIC per second	>= 0	KiB/s	1024(IEC)	dcs_cluster_proxy_node	1 minute
+avg_txkB_per_sec	Average Outbound Bandwidth	Average volume of data transmitted by the proxy NIC per second	>= 0	KiB/s	1024(IEC)	dcs_cluster_proxy_node	1 minute
+
