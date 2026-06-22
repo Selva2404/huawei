@@ -1,0 +1,62 @@
+Waf
+
+Use cases
+
+Threat detection:  	Identify attacks early by monitoring deny counts from ACLs and IPSs. This enables quicker investigation and response to unusual spikes in traffic.
+Bandwidth control:  	To avoid traffic drops, keep track of the bandwidth usage of protection systems. This will help scale firewall capacity before reaching its limits.
+Policy validation:     	Ensure the effectiveness of security rules by monitoring hit counts. This approach helps identify misconfigurations before security policies fail unnoticed.
+
+Supported metrics
+
+ACL
+Metric name	Description	Units
+ACL Deny Count	The number of traffic flows denied by ACL rules on the firewall.	Count
+ACL Hit Count	The number of traffic flows that matched an ACL rule on the firewall.	Count
+IPS
+Metric name	Description	Units
+IPS Deny Count	The number of traffic flows blocked by the IPS on the firewall.	Count
+IPS Hit Count	The number of traffic flows that triggered an IPS rule on the firewall.	Count
+Internet protection
+Metric name	Description	Units
+Internet Protection Bandwidth Usage	The amount of bandwidth currently consumed by internet-facing traffic under firewall protection.	Bit/second
+Internet Protection Bandwidth Usage Rate	The percentage of the configured internet protection bandwidth currently in use.	Percentage
+Internet Protection Packets Per Second	The rate of packets per second currently processed under internet protection on the firewall.	Count
+VPC protection
+Metric name	Description	Units
+VPC Protection Bandwidth Usage	The amount of bandwidth currently consumed by east-west virtual private cloud (VPC) traffic under firewall protection.	Bit/second
+VPC Protection Bandwidth Usage Rate	The percentage of the configured VPC protection bandwidth currently in use.	Percentage
+VPC Protection Packets Per Second	The rate of packets per second currently processed under VPC protection on the firewall.	Count
+Bandwidth
+Metric name	Description	Units
+Used Protection Bandwidth	The total protection bandwidth currently consumed across all protected traffic on the firewall.	KB/second
+Protection Bandwidth Usage	The percentage of the total configured protection bandwidth currently in use on the firewall.	Percentage
+
+
+Field	Importance	Why
+total	⭐⭐⭐	Total protected domains
+cloud_total	⭐⭐⭐	Number of Cloud WAF domains
+premium_total	⭐⭐⭐	Number of Dedicated WAF domains
+hostname	⭐⭐⭐⭐⭐	Protected domain name
+waf_type	⭐⭐⭐⭐⭐	Cloud or Dedicated WAF
+policyid	⭐⭐⭐⭐⭐	Protection policy attached to domain
+protect_status	⭐⭐⭐⭐⭐	Whether WAF protection is enabled
+access_status	⭐⭐⭐⭐⭐	Whether domain is reachable
+access_code	⭐⭐⭐⭐	WAF CNAME/DNS configuration
+timestamp	⭐⭐⭐	When domain was onboarded
+
+Field	Importance	Why
+region	⭐⭐⭐⭐	Region hosting WAF
+exclusive_ip	⭐⭐⭐⭐	Dedicated IP enabled
+proxy	⭐⭐⭐	Traffic passes through another proxy
+enterprise_project_id	⭐⭐⭐	Enterprise project mapping
+premium_waf_instances.id	⭐⭐⭐⭐	Dedicated WAF engine ID
+premium_waf_instances.accessed	⭐⭐⭐⭐	Whether dedicated engine is connected
+
+
+Field	Importance	Why
+server.address	⭐⭐⭐⭐	Backend server IP
+server.port	⭐⭐⭐⭐	Backend server port
+server.front_protocol	⭐⭐⭐⭐	Client → WAF protocol
+server.back_protocol	⭐⭐⭐⭐	WAF → Backend protocol
+server.vpc_id	⭐⭐⭐⭐	Dedicated WAF VPC
+server.type	⭐⭐⭐	IPv4 or IPv6
